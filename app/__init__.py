@@ -30,3 +30,9 @@ def subtract_values():
     if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
         return {'error': 'Bad data, values must be int or float'}, 400
     return {'result': num1-num2}, 200
+
+
+
+
+
+# python -m unittest discover -v -s ./tests
