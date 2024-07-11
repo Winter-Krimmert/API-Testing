@@ -20,6 +20,7 @@ def add_values():
         return {'error': 'Bad data, values must be int or float'}, 400
     return {'result': num1+num2}
 
+
 @app.route('/subtract', methods=['POST'])
 def subtract_values():
     if not request.is_json:
@@ -29,7 +30,8 @@ def subtract_values():
     num2 = data['num2']
     if not isinstance(num1, (int, float)) or not isinstance(num2, (int, float)):
         return {'error': 'Bad data, values must be int or float'}, 400
-    return {'result': num1-num2}, 200
+    return {'result': num1 - num2}
+
 
 
 
